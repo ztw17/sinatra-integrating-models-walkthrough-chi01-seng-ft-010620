@@ -111,7 +111,7 @@ We now have the instance of `TextAnalyzer` saved to an instance variable called 
 ## Using instance variables in ERB
 In our `results.erb` file, use erb tags to display the data stored in the `@analyzed_text` variable. Your end result should look something like this:
 
-<img src="https://s3.amazonaws.com/learn-verified/text-analyzer.png">
+<img src="https://learn-verified.s3.amazonaws.com/text-analyzer.png">
 
 ## Full MVC
 Congratulations! You've now created your first Sinatra app that uses a model, views, and a controller! You are taking user input in a form, sending it via params to the 'post' route where a new instance of the model is created using the data from the form. This instance is passed back to the view, where it is rendered using erb tags. Pat yourself on the back, this is a big milestone in your developer journey!
