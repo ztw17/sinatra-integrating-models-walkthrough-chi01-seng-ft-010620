@@ -84,9 +84,11 @@ my_text.most_used_letter #=> {"n" => 6}
 In general our models are agnostic about the rest of our application - we could drop this class into a Command Line or Ruby on Rails app and it would function in the exact same way.
 
 ## Using a model in the controller
-In order to use the model we've created in our controller we need to connect the two. To do this, we'll use the `require_relative` keyword to bring in the code from the model we've created. At the top of `app.rb`, add `require_relative "models/text_analyzer.rb"`. This now gives us the ability to create new instances of the TextAnalyzer class from within our controller.
 
-Now, let's take the data from `params[user_text]` (in the `post '/' do` route) and feed it into a new instance of the`TextAnalyzer` class:
+To use the model we've created with our controller, we need to connect the two. In order to do this, we'll add a `require_relative` statement to the controller so that this file can use this new class.. At the top of `app.rb`, add `require_relative "models/text_analyzer.rb"`. This now gives us the ability to reference the `TextAnalyzer` class and invoke its `new` method.
+
+Now, let's take the data from params[user_text] (in the post '/' do route) and feed it into a new instance of the `TextAnalyzer` class:
+
 ```ruby
 post '/' do
   text_from_user = params[:user_text]
