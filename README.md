@@ -87,7 +87,7 @@ In general our models are agnostic about the rest of our application - we could 
 
 To use the model we've created with our controller, we need to connect the two. In order to do this, we'll add a `require_relative` statement to the controller so that this file can use this new class.. At the top of `app.rb`, add `require_relative "models/text_analyzer.rb"`. This now gives us the ability to reference the `TextAnalyzer` class and invoke its `new` method.
 
-Now, let's take the data from params[user_text] (in the post '/' do route) and feed it into a new instance of the `TextAnalyzer` class:
+Now, let's take the data from `params[:user_text]` (in the post '/' do route) and feed it into a new instance of the `TextAnalyzer` class:
 
 ```ruby
 post '/' do
